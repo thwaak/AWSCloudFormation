@@ -12,9 +12,9 @@ Resources:
       InstanceTenancy: "Dedicated"
       Tags:
         - Key: Name
-        Value: 'Production VPC'
+          Value: 'Production VPC'
         - Key: Environment
-        Value: 'Production'
+          Value: 'Production'
 
   SubnetA:
     Type: 'AWS::EC2::Subnet'
@@ -26,6 +26,6 @@ Resources:
       MapPublicIpOnLaunch: "False"
       Tags:
         - Key: Name
-        Value: 'Production SubnetA'
+          Value: 'Production SubnetA'
         - Key: Environment
-        Value: 'Production'
+          Value: 'Production'
