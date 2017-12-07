@@ -9,7 +9,7 @@ Resources:
       CidrBlock: 10.1.0.0/16
       EnableDnsSupport: "True"
       EnableDnsHostnames: "True"
-      InstanceTenancy: "Dedicated"
+      InstanceTenancy: "dedicated"
       Tags:
         - Key: Name
           Value: 'Production VPC'
