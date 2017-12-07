@@ -4,28 +4,28 @@ Description: 'VPC Testing Cloud Formation'
 
 Resources:
   VPC:
-    Type: "AWS::EC2::VPC"
-      Properties: 
-        CidrBlock: 10.1.0.0/16
-        EnableDnsSupport: "True"
-        EnableDnsHostnames: "True"
-        InstanceTenancy: "Dedicated"
-        Tags:
-          - Key: Name
-          Value: 'Production VPC'
-          - Key: Environment
-          Value: 'Production'
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: 10.1.0.0/16
+      EnableDnsSupport: "True"
+      EnableDnsHostnames: "True"
+      InstanceTenancy: "Dedicated"
+      Tags:
+        - Key: Name
+        Value: 'Production VPC'
+        - Key: Environment
+        Value: 'Production'
 
   SubnetA:
-    Type: "AWS::EC2::Subnet"
-      Properties:
-        VpcId: !Ref VPC
-        AvailabilityZone: ap-southeast-2a
-        CidrBlock: 10.1.10.0/24
-        AssignIpv6AddressOnCreation: "False"
-        MapPublicIpOnLaunch: "False"
-        Tags:
-          - Key: Name
-          Value: 'Production SubnetA'
-          - Key Environment
-          Value: 'Production'
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref VPC
+      AvailabilityZone: ap-southeast-2a
+      CidrBlock: 10.1.10.0/24
+      AssignIpv6AddressOnCreation: "False"
+      MapPublicIpOnLaunch: "False"
+      Tags:
+        - Key: Name
+        Value: 'Production SubnetA'
+        - Key: Environment
+        Value: 'Production'
